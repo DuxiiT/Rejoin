@@ -265,8 +265,8 @@ end)
 -- Shutdown Handlers
 --==================================================
 
-game:BindToClose(function()
-	closeWebSocket("Game closed")
+game.Close:Connect(function()
+    closeWebSocket("Game closed")
 end)
 
 Players.PlayerRemoving:Connect(function(plr)
